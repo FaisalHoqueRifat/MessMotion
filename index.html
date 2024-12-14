@@ -1,13 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/MessMotion.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MessMotion</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .home-2{
+        border-radius: 21.586px 21.586px 21.586px 21.586px;
+background: linear-gradient(191deg, rgba(172, 173, 169, 0.78) -18.46%, #FC5757 183.09%);
+    }
+    .home-1{
+        border-radius: 21.586px 21.586px 21.586px 21.586px;
+        background: linear-gradient(191deg, rgba(86, 94, 67, 0.78) -18.46%, #FC5757 183.09%);
+    }
+
+
+    @keyframes borderAnimation {
+      0% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: rgba(219, 207, 195, 0.7);
+      }
+      100% {
+        border-color: transparent;
+      }
+    }
+
+    .home-1 ,.home-2 {
+      border-width: 5px;
+      border-color: transparent;
+      border-style: solid;
+      position: relative;
+      padding: 20px;
+      transition: padding 0.3s ease;
+    }
+
+    .home-1:hover {
+      animation: borderAnimation 2s ease-in-out infinite;
+      padding: 18px; /* Reduce padding on hover for a "shrink" effect */
+    }
+    .home-2:hover {
+      animation: borderAnimation 2s ease-in-out infinite;
+      padding: 18px; /* Reduce padding on hover for a "shrink" effect */
+      
+    }
+
+    .home-1 h1, .home-1 p {
+      z-index: 1; /* Keep text above the animated border */
+    }
+
+    
+
+    .home-2 h1, .home-2 p {
+      z-index: 1; /* Keep text above the animated border */
+    } 
+
+
+
+    
+
+</style>
+
+</head>
+<body style="background-image: url('hello.jpg');" class="bg-cover bg-center min-h-screen grid items-center justify-center ">
+    <div class="grid grid-cols-2   w-[720px] mx-auto items-center justify-center gap-2 ">
+        <div class="text-center text-white home-1 p-3  " >
+            <h1 class="font-extrabold text-[35px] pb-2">Welcome to 
+              MessMotion</h1>
+
+            <p class="pb-3">An application that aims to digitalize the mess management system and helps make the job easier for students.</p>
+
+            <button class="btn btn-outline"><a href="Home.html">Get Started</a></button>
+        </div>
+
+        <div class="text-white text-center home-2 h-full p-8">
+            <i class="fa-solid fa-hotel text-8xl pb-3"></i>
+            <h1 class="font-bold text-[30px] pb-3"> MessMotion</h1>
+            <div class="grid justify-end text-left pl-16">
+                <p >#This is destination for all your mess needs</p>
+            </div>
+
+        </div>
+
+    </div>
+  
+    
+</body>
 </html>
